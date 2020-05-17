@@ -6,7 +6,7 @@
     padding: 0;
     background-color: #24252A; 
 }
-li, a, h2, button{
+header li, a, h2, button, p{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -55,31 +55,52 @@ button:hover{
 .active{
     color: rgba(255, 20, 147, 0.8);
 }
+.contact{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+}
+.content{
+    max-width: 600px;
+}
+.content p{
+    font-weight: 300;
+}
+#abt{
+    color: rgba(255, 20, 147, 1);
+}
+span{
+    color: rgba(255, 20, 147, 1);
+    font-size: 40px; 
+}
 
-/*body{
-    padding: 5px;
-    margin: 2%;
-    display: inline-block;
-}*/
-/* header{
-    text-align: center;
-    padding: 15px;
-    background-color: black;
-    font: Avantgarde;
-    font-family: "Optima" ,sans-serif;
+.signs{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
 }
-nav a{
-    color: white;
-    margin: 10px 10px 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
+.signs li{
+    list-style: none;
+}
+.signs li a{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
     text-decoration: none;
+    border: 1px solid rgba(255, 20, 147, 1);
+    margin: 50px 0 0;
 }
-nav .active{
-    color: rgb(0,0,0);
-    background:rgb(255,255,255);
+.signs li a:hover
+{
+    background: rgba(255, 20, 147, 1);
 }
-#Head{
-    color: white;
-    font-size: 40px;
-} */
+.signs li a img{
+    max-width: 40px;
+    mix-blend-mode: difference;
+}
