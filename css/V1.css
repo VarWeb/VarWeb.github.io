@@ -87,6 +87,7 @@ span{
     list-style: none;
 }
 .signs li a{
+    
     position: relative;
     display: grid;
     place-items: center;
