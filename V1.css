@@ -55,9 +55,7 @@ button:hover{
 .active{
     color: rgba(255, 20, 147, 0.8);
 }
-.active:hover{
-    color: rbga(0,0,0,0);
-}
+
 /*body{
     padding: 5px;
     margin: 2%;
