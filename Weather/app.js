@@ -1,18 +1,17 @@
-// SELECT ELEMENTS
+//Selecting the elements from DOM.
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value");
 const descElement = document.querySelector(".temperature-description");
 const locationElement = document.querySelector(".location");
 const notificationElement = document.querySelector(".notification");
-
-// App data
-const weather = {};
+//Object for storing in the data parsed from the API.
+const weather = {
+};
 
 weather.temperature = {
     unit : "celsius"
 }
-
-// APP CONSTS AND VARS
+//CONSTS
 const KELVIN = 273.15;
 // API KEY
 const key = "18e12341fd49404bd8fcdd39af70c4d2";
@@ -38,14 +37,13 @@ function showError(error){
     notificationElement.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
-
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude){
     let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
-        .then(function(response){
-            let data = response.json();
+        .then(function(r){
+            let data = r.json();
             return data;
         })
         .then(function(data){
